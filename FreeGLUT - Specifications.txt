@@ -1,0 +1,4 @@
+Instead (apologies for any inconsistencies, I'm basing these instructions on VS2010)... - put the freeglut folder somewhere else, e.g. C:\dev - Open your project in Visual Studio - Open project properties - There should be a tab for VC++ Directories, here you should add the appropriate include and lib folders, e.g.: C:\dev\freeglut\include and C:\dev\freeglut\lib - (Almost) Final step is to ensure that the opengl lib file is actually linked during compilation. Still in project properties, expand the linker menu, and open the input tab. For Additional Dependencies add opengl32.lib (you would assume that this would be linked automatically just by adding the include GL/gl.h to your project, but for some reason this doesn't seem to be the case)
+
+
+At this stage your project should compile OK. To actually run it, you also need to copy the freeglut.dll files into your project folder
